@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#first {
+    color: aqua;
+}
+
+.green {
+    color: greenyellow;
+}
+
+.bigger {
+    font-size: 24pt;
+}
+
+main .bigger {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
