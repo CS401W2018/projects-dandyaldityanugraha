@@ -1,19 +1,22 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:rgb(71, 227, 255);
+    background-color: rgb(107, 129, 135);
 }
 
-#first {
+#first1 {
     color: aqua;
 }
 
 .green {
-    color: greenyellow;
+    color: greenyellow;url(selcss.css)1
 }
 
 .bigger {
     font-size: 24pt;
 }
 
-main .bigger {
+main .bigger1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
