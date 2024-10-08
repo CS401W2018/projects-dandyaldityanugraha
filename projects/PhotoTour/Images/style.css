@@ -1,0 +1,25 @@
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: black;
+    background: url(background.jpg) rgb(39, 119, 231) repeat;
+}
+
+#indexPage {
+    background: url(Family.jpg) bottom right no-repeat;
+}
+
+.list {
+    list-style-image: url(faviconD-1.png);
+}
+
+nav a {
+    color: rgb(39, 130, 233);
+}
+
+.active {
+    color: grey;
+}
+
+footer {
+    font-weight: bolder;
+}
