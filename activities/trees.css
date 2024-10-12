@@ -1,0 +1,49 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 300px;
+    background-color: antiquewhite;
+}
+
+nav ul {
+    display: block;
+    padding: 10px 5px;
+    background-color: aquamarine;
+    border-bottom: thin solid white;
+}
+
+nav li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 30px;
+    background-color: palevioletred;
+    color: white;
+    border-bottom: thin solid white;
+}
+
+nav a:hover {
+    color: bisque;
+    background-color: whitesmoke;
+}
+
+#treepic {
+    width: 250px;
+    border: thin solid black;
+    position: relative;
+    top: 0px;
+}
+
+#treepic img {
+    width: 250px;
+}
+
+.clear {
+    clear: both;
+}
