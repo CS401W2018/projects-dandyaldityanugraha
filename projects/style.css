@@ -1,0 +1,163 @@
+body {
+    background-color: black;
+    margin: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#wrapper {
+    width: 900px;
+    background-color: rgb(102, 0, 0);
+    margin: 0 auto;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+header {
+    padding-top: 20 px;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+.title {
+    color: white;
+    background-color: white;
+    
+    border-radius: 10px;
+    width: fit-content;
+
+    margin: 0 auto;
+    padding: 10px 50px;
+
+    text-align: center;
+
+    text-shadow: 1px 1px 2px;
+
+    box-shadow: 10px 8px 8px red;
+
+    background: url(../projects/backg.jpg) repeat;
+
+    background-clip: padding-box;
+}
+
+.title span {
+    background-color: black;
+    border-radius: 10px;
+    padding: 0, 1em 0, 1em;
+    border: 2px solid black, 0.5;
+    box-shadow: 3px 4px 4px rgb(102, 0, 0), 3px -3px 5px rgb(102, 0, 0), 
+    -3px -3px 5px rgb(102, 0, 0);
+}
+
+.title2 {
+    color: black;
+    width: fit-content;
+    border: 3px double crimson;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px auto;
+
+    padding: 13px 30px;
+
+    text-align: center;
+    margin-bottom: 1em;
+
+    text-shadow: 1px 1px 2px;
+
+    box-shadow: -10px 10px 10px rgb(251, 73, 73);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    background-color: crimson;
+    border-radius: 10px;
+
+    padding: 15px 25px;
+    margin: 1em 1.5em;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: blueviolet;
+}
+
+nav {
+    text-align: center;
+}
+
+main{
+    margin: 0 3em;
+    margin-top: 3em;
+}
+
+.title-main {
+    width: fit-content;
+    margin-left: 30px;
+    background-color: black;
+    color: crimson;
+    padding: 5px 20px;
+    box-shadow: 10px 8px 8px red;
+}
+
+#fg {
+    border: 2px solid rgb(0, 0, 0);
+    width: 400px;
+
+    float: left;
+    box-shadow: 10px 8px 8ox red;
+}
+
+.fc {
+    text-align: center;
+    padding: 10px 0;
+    color: black;
+
+    font-style: italic;
+
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+.pg {
+    margin: 3em 0;
+
+    font-size: 0.93em;
+
+    line-height: 1.8em;
+    color: black;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pg span{
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    height: 80px;
+    font-weight: bold;
+}
+
+footer p {
+    width: 70%;
+
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px 100px;
+    margin: 0 20px;
+    color: crimson;
+    padding: 10px;
+
+    background: url(../projects/123.jpg) right no-repeat;
+}
