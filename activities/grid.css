@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: antiquewhite;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header headere header"
+    "lmain main rmain"
+    "foot foot foot";
+}
+
+.item {
+    background-color: rgb(189, 249, 229);
+    border: thin solid white;
+}
+
+.itemA {
+    grid-area: lmain;
+}
+
+.itemB {
+    grid-area: rmain;
+}
+
+.itemC {
+    grid-area: main;
+}
+
+.itemD {
+    grid-area: footer;
+}
+
+.itemE {
+    grid-area: footer;
+}
+
+.itemF {
+    grid-area: footer;
+}
