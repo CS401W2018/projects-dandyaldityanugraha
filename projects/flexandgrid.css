@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(13, 13, 13); 
+    color: white;
+}
+
+header {
+    background-color: maroon;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 35px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(28, 28, 28); 
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    padding: 10px;
+    display: block;
+    font-family: 'VT323', monospace; 
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: rgb(10, 132, 255); 
+}
+
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+aside {
+    width: 25%;
+    background-color:  rgb(28, 28, 28); 
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid rgb(51, 51, 51);
+    background-color:  rgb(28, 28, 28);
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    border-bottom: 5px solid maroon; 
+}
+
+.card h3 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin: 10px 0;
+}
+
+.card p {
+    color: gray
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px  rgb(10, 132, 255); 
+}
+
+footer {
+    background-color:  rgb(28, 28, 28);
+    padding: 20px;
+    text-align: center;
+    color: gray;
+    font-weight: bolder;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border: 1px solid rgb(51, 51, 51);
+}
+
+footer a:hover {
+    background-color: rgb(10, 132, 255);
+    color: white;
+}
