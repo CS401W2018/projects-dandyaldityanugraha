@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+    font-family: 'Robot', sans-serif;
+    color: white;
+}
+
+header {
+    background-color: gray;
+    color: rgb(242, 242, 7);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.shoesiety {
+    width: 200px;
+    border: thin solid antiquewhite;
+    box-shadow: 3px 3px 3px yellow;
+    margin: 5px;
+}
+
+.shoesiety img {
+    width: 100%;
+}
+
+.row {
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: thin solid antiquewhite;
+    }
+
+    .shoesiety {
+        width: 100%;
+    } 
+
+    .mainshoesiety {
+        order: -1;
+    }
+
+}  
+
+
+footer {
+    font-weight: bold;
+    text-align: center;
+}
