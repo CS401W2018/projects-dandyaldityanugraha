@@ -1,0 +1,34 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+.schedule {
+    margin: 5px auto;
+    border: thin solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+.schedule td, .schedule th {
+    border: thin solid black;
+}
+
+.schedule thead, .schedule tfoot {
+    background-color: darkgray;
+    color: white;
+
+}
+
+.schedule tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+#total-credits{
+    border: ;
+}
+
+footer{
+    text-align: center;
+}
