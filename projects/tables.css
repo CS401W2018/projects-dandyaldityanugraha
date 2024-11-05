@@ -45,6 +45,20 @@ main {
     flex: 3;
 }
 
+.winner {
+    background-color: rgb(90, 156, 255);
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(90, 156, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.winner:hover {
+    background-color: rgb(60, 130, 200);
+    cursor: pointer;
+}
+
 .congratulations {
     text-align: center;
     color: rgb(90, 156, 255);
@@ -56,6 +70,7 @@ main {
     background-color: rgb(10, 25, 47);
     padding: 15px;
     border-radius: 8px;
+    max-height: 300px;
 }
 
 .sidebar h3 {
@@ -65,7 +80,8 @@ main {
 
 .logo-container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     margin-top: 15px; 
 }
 
@@ -74,6 +90,13 @@ main {
     height: auto;
     border: 2px solid rgb(90, 156, 255);
     border-radius: 5px;
+}
+
+.vs {
+    margin: 0 10px;
+    font-size: 24px;
+    color: rgb(90, 156, 255);
+    font-weight: bolds;
 }
 
 table {
@@ -94,12 +117,14 @@ th {
     background-color: rgb(20, 54, 94);
     color: white;
     padding: 10px;
+    border: 3px solid black;
 }
 
 td {
     padding: 10px;
     text-align: center;
     border: 3px solid rgb(0, 0, 0);
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 tbody tr:nth-child(even) {
@@ -108,4 +133,11 @@ tbody tr:nth-child(even) {
 
 tbody tr:nth-child(odd) {
     background-color: rgb(10, 25, 47);
+}
+
+table td[colspan="3"] {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(90, 156, 255);
+    padding: 10px;
 }
