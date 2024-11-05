@@ -82,18 +82,23 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     margin-top: 15px; 
 }
 
 .logo-container img {
     width: 100px;
     height: auto;
+    transition: transform 0.3s ease;
     border: 2px solid rgb(90, 156, 255);
-    border-radius: 5px;
+    border-radius: 8px;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
 }
 
 .vs {
-    margin: 0 10px;
     font-size: 24px;
     color: rgb(90, 156, 255);
     font-weight: bold;
