@@ -60,6 +60,7 @@ main {
 
 .sidebar h3 {
     color: rgb(90, 156, 255);
+    text-align: center;
 }
 
 .logo-container {
