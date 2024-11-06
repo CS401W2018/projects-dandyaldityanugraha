@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <form action="processing.html" method="post"> 
+            First Name: <input type="text" name="first"><br>
+            Last Name: <input type="text" name="last"><br>
+            Password: <input type="pasword" name="pass"><br>
+            <input type="checkbox" name="rember"> Remember Me <br>
+            Grade: <br>
+            <input type="radio" name="grade" value="Freshman"> Freshman <br>
+            <input type="radio" name="grade" value="Sophmore"> Sophmore <br>
+            <input type="radio" name="grade" value="Junior"> Junior <br>
+            <input type="radio" name="grade" value="Senior"> Senior <br>
+            <select name="State" id="state">
+                <option value="blank"></option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Hawaii">Utah</option>
+                <option value="Hawaii">Washington</option>
+                <option value="Hawaii">Provo</option>
+                <option value="Hawaii">Idaho</option>
+            </select><br>
+            <textarea name="comment" id=""></textarea><br>
+            <input type="submit">
+        </form>
+        <ol>
+            <li>
+                The form tag has an "action" attribute. What does it do?
+                <p>The action in the form tag is to send data to the specific URL</p>
+            </li>
+            <li>
+                The form tag has a "method" attribute. What does it do?
+                <p>The method in the form tag is to define the type of data that will be send into server</p>
+            </li>
+            <li>
+                What is the difference between a "POST" and a "GET"?
+                <p><strong>Post:</strong> This is the methode to make the data more secure for sensitive information like Password</p>
+                <p><strong>Get:</strong> This is the methode to make the data is visible in URL, it make the data less secure for sensitive data</p>
+            </li>
+        </ol>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dandy Nugraha. 
+            <br>All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
