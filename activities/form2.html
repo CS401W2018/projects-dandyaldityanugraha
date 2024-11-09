@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <form action="processing.html" method="post"></form>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div class="form-row">
+                    <label for="fname">First Name:</label>
+                    <input id="name" type="text" name="first" value="Dandy" required >
+                </div>
+                <div class="form-row">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="last" placeholder="Last Name">
+                </div>
+                <div class="form-row">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div class="check-row">
+                    <div class="spacer"></div>
+                    <label>
+                        <input type="checkbox" name="remember" checked>
+                        Remember Me
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label for="state">State</label>
+                    <select name="state" id="state">
+                        <option value="blank"></option>
+                        <option value="CA">California</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="UT">Utah</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments"></textarea>
+                </div>
+                <div class="check-row">
+                    Class: 
+                    <label><input type="radio" name="class" value="Freshman"> Freshman</label>
+                    <label><input type="radio" name="class" value="Sophmore"> Sophmore </label>
+                    <label><input type="radio" name="class" value="Junior"> Junior </label>
+                    <label><input type="radio" name="class" value="Senior"> Senior </label>
+                </div>
+                <div class="form-row">
+                    <input type="submit">
+                </div>
+            </fieldset>
+
+        <ol>
+            <li>What are different ways to style your form?
+                <p>We can use flex or grid to style the form</p>
+            </li>
+            <li>Why does the professor like to use flex?
+                <p>Is easy to do styling and positioning if using flex for form</p>
+            </li>
+        </ol>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dandy Nugraha. 
+            <br>All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
