@@ -57,11 +57,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 label {
     display: inline-block;
-    width: 150px;
+    width: 175px;
     margin-right: 10px;
     color: rgb(220, 225, 230);
 }
