@@ -11,9 +11,14 @@ header {
     color: rgb(220, 225, 230);
     text-align: center;
     padding: 20px;
+    font-size: 1.5em;
 }
 
 footer {
+    background-color: rgb(46, 59, 78);
+    color: rgb(220, 225, 230);
+    text-align: center;
+    padding: 10px;
     font-size: 0.9em;
 }
 
@@ -46,13 +51,6 @@ legend {
     padding: 10px;
 }
 
-footer {
-    background-color: rgb(46, 59, 78);
-    color: rgb(220, 225, 230);
-    text-align: center;
-    padding: 10px;
-}
-
 .form-group {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +60,7 @@ footer {
 
 label {
     display: inline-block;
-    width: 175px;
+    width: 150px;
     margin-right: 10px;
     color: rgb(220, 225, 230);
 }
@@ -87,13 +85,6 @@ label {
 .checkbox-field, .radio-field {
     width: auto;
     margin-right: 5px;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: rgb(220, 225, 230);
 }
 
 .submit-button {
