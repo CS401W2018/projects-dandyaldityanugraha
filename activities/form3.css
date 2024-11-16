@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 51, 51);
+    color: rgb(220, 225, 230);
+}
+
+header {
+    background-color: rgb(46, 59, 78);
+    color: rgb(220, 225, 230);
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: rgb(46, 59, 78);
+    color: rgb(220, 225, 230);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(10, 25, 47);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(90, 156, 255, 0.5);
+}
+
+fieldset {
+    border: 1px solid rgb(90, 156, 255);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    border: thin solid white;
+    font-size: 1.2em;
+    color: rgb(90, 156, 255);
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 10px;
+    color: rgb(220, 225, 230);
+}
+
+.text-field, .password-field, .date-field, .email-field, .phone-field, .textarea-field, .select-field {
+    padding: 8px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    width: calc(100% - 170px);
+    background-color: rgb(15, 44, 84);
+    color: rgb(220, 225, 230);
+}
+
+.textarea-field {
+    height: 80px;
+}
+
+.select-field {
+    padding: 8px;
+}
+
+.checkbox-field, .radio-field {
+    width: auto;
+    margin-right: 5px;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    border: none;
+    background-color: rgb(90, 156, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: rgb(60, 130, 200);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    label {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .text-field, .password-field, .date-field, .email-field, .phone-field, 
+    .textarea-field, .select-field {
+        width: 100%;
+    }
+    .submit-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
