@@ -1,82 +1,73 @@
-document.getElementById("registrationForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting in the traditional way
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-    // Collect form inputs into a JavaScript object
+    // Collect form data
+    const firstName = document.getElementById('first-name').value.trim();
+    const lastName = document.getElementById('lname').value.trim();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const state = document.getElementById('state').value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value || "";
+    const nationality = document.querySelector('input[name="nationality"]:checked')?.value || "";
+    const dob = document.getElementById('dob').value;
+    const email = document.getElementById('email').value.trim();
+
+    // Input validation
+    if (!firstName || !lastName) {
+        alert('First Name and Last Name cannot be blank.');
+        return;
+    }
+
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        return;
+    }
+
+    if (!dob) {
+        alert('Date of Birth cannot be blank.');
+        return;
+    }
+
+    if (!email) {
+        alert('Email is required.');
+        return;
+    }
+
+    if (!state || state === "blank") {
+        alert('Please select a state.');
+        return;
+    }
+
+    // Create formData object
     const formData = {
-        firstName: document.getElementById("first-name").value,
-        lastName: document.getElementById("lname").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-        address: document.getElementById("address").value,
-        gender: document.querySelector('input[name="gender"]:checked')?.value || "",
-        nationality: document.querySelector('input[name="nationality"]:checked')?.value || "",
-        state: document.getElementById("state").value,
-        dob: document.getElementById("dob").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
+        firstName,
+        lastName,
+        username,
+        password,
+        state,
+        gender,
+        nationality,
+        dob,
+        email,
     };
 
-    // Validate the inputs
-    const errors = validateInputs(formData);
-
-    if (errors.length > 0) {
-        alert(`Please fix the following errors:\n\n${errors.join("\n")}`);
-        return; // Stop the form submission
-    }
-
-    // Log the form data to the console
-    console.log("Collected Form Data:", formData);
-
-    // Simulate sending the data using an AJAX call
-    sendFormData(formData);
-});
-
-// Function to validate form inputs
-function validateInputs(data) {
-    const errors = [];
-
-    // Check required fields
-    if (!data.firstName) errors.push("First Name is required.");
-    if (!data.lastName) errors.push("Last Name is required.");
-    if (!data.username) errors.push("Username is required.");
-
-    // Check password length
-    if (data.password.length < 6) {
-        errors.push("Password must be at least 6 characters.");
-    }
-
-    // Check if state is selected
-    if (!data.state || data.state === "blank") {
-        errors.push("Please select a state.");
-    }
-
-    // Validate date of birth
-    if (!data.dob) errors.push("Date of Birth is required.");
-
-    return errors;
-}
-
-// Function to send form data using AJAX
-function sendFormData(data) {
+    // Send the data via AJAX
     const xhr = new XMLHttpRequest();
+    xhr.open("POST", "submit.js", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    // Simulate a server response using a JSON file
-    xhr.open("GET", "response.json", true); // Use "GET" to fetch the response.json file
-    xhr.onload = function () {
-        if (xhr.status === 200) {
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
-
-            // Display the success message on the page
-            const main = document.querySelector("main");
-            main.innerHTML = `<h2>${response.message}</h2>`;
-        } else {
-            alert("An error occurred while submitting the form.");
+            document.querySelector('main').innerHTML = `<h2>${response.message}</h2>`;
+        } else if (xhr.readyState === 4) {
+            alert('Error submitting form.');
         }
     };
 
-    xhr.onerror = function () {
-        alert("An error occurred while connecting to the server.");
-    };
+    xhr.send(JSON.stringify(formData)); // Send the formData as JSON
 
-    xhr.send();
-}
+    console.log(formData); // Log the form data to the console
+
+    alert(`Success: ${firstName} ${lastName}`);
+});
