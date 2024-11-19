@@ -1,52 +1,82 @@
-document.getElementById("myForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default form submission
-  
-    // Collect form inputs into a JavaScript Object
+document.getElementById("registrationForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    // Collect form inputs into a JavaScript object
     const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      age: parseInt(document.getElementById("age").value),
-      message: document.getElementById("message").value,
+        firstName: document.getElementById("first-name").value,
+        lastName: document.getElementById("lname").value,
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+        address: document.getElementById("address").value,
+        gender: document.querySelector('input[name="gender"]:checked')?.value || "",
+        nationality: document.querySelector('input[name="nationality"]:checked')?.value || "",
+        state: document.getElementById("state").value,
+        dob: document.getElementById("dob").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
     };
-  
-    // Log the object to the console
-    console.log("Form Data:", formData);
-  
-    // Validate inputs
-    let errors = [];
-    if (!formData.name) errors.push("Name is required.");
-    if (!formData.email) errors.push("Email is required.");
-    if (!formData.message) errors.push("Message is required.");
-    if (isNaN(formData.age) || formData.age < 18 || formData.age > 100) {
-      errors.push("Age must be between 18 and 100.");
-    }
-  
+
+    // Validate the inputs
+    const errors = validateInputs(formData);
+
     if (errors.length > 0) {
-      alert("Please fix the following errors:\n" + errors.join("\n"));
-      return;
+        alert(`Please fix the following errors:\n\n${errors.join("\n")}`);
+        return; // Stop the form submission
     }
-  
-    // Notify the user the form is being processed
-    document.getElementById("responseMessage").innerText = "Processing your form...";
-  
-    // Send an AJAX call
+
+    // Log the form data to the console
+    console.log("Collected Form Data:", formData);
+
+    // Simulate sending the data using an AJAX call
+    sendFormData(formData);
+});
+
+// Function to validate form inputs
+function validateInputs(data) {
+    const errors = [];
+
+    // Check required fields
+    if (!data.firstName) errors.push("First Name is required.");
+    if (!data.lastName) errors.push("Last Name is required.");
+    if (!data.username) errors.push("Username is required.");
+
+    // Check password length
+    if (data.password.length < 6) {
+        errors.push("Password must be at least 6 characters.");
+    }
+
+    // Check if state is selected
+    if (!data.state || data.state === "blank") {
+        errors.push("Please select a state.");
+    }
+
+    // Validate date of birth
+    if (!data.dob) errors.push("Date of Birth is required.");
+
+    return errors;
+}
+
+// Function to send form data using AJAX
+function sendFormData(data) {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "submit.json", true); // Change "POST" to "GET" for GitHub hosting
-    xhr.setRequestHeader("Content-Type", "application/json");
-  
+
+    // Simulate a server response using a JSON file
+    xhr.open("GET", "response.json", true); // Use "GET" to fetch the response.json file
     xhr.onload = function () {
-      if (xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        document.getElementById("responseMessage").innerText = response.message;
-  
-        // Reset the form after successful submission
-        document.getElementById("myForm").reset();
-      } else {
-        document.getElementById("responseMessage").innerText =
-          "Something went wrong. Please try again.";
-      }
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+
+            // Display the success message on the page
+            const main = document.querySelector("main");
+            main.innerHTML = `<h2>${response.message}</h2>`;
+        } else {
+            alert("An error occurred while submitting the form.");
+        }
     };
-  
-    xhr.send(JSON.stringify(formData));
-  });
-  
+
+    xhr.onerror = function () {
+        alert("An error occurred while connecting to the server.");
+    };
+
+    xhr.send();
+}
