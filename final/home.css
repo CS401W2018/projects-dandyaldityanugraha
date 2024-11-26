@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255); /* White */
+    background-color: rgb(17, 17, 17); /* Very dark gray */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    background-color: rgb(0, 0, 0); /* Black */
+    padding: 15px 20px;
+    border-bottom: 2px solid rgb(255, 215, 0); /* Gold */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .logo {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h1 {
+    color: rgb(255, 215, 0); /* Gold */
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header-text p {
+    color: rgb(200, 200, 200); /* Light gray */
+    margin: 5px 0 0 0;
+    font-size: 1.1em;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: rgb(255, 215, 0); /* Gold */
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Black */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    color: rgb(255, 215, 0); /* Gold */
+    background-color: rgb(0, 0, 0); /* Black */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    color: rgb(255, 215, 0); /* Gold */
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    color: rgb(220, 220, 220); /* Light gray */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.main-content .banner {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 5px solid rgb(255, 215, 0); /* Gold */
+    border-radius: 10px;
+}
+
+.main-content .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(255, 215, 0); /* Gold */
+    color: rgb(0, 0, 0); /* Black */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main-content .cta-button:hover {
+    background-color: rgb(0, 0, 0); /* Black */
+    color: rgb(255, 215, 0); /* Gold */
+    border: 2px solid rgb(255, 215, 0); /* Gold */
+}
+
+
+footer {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    color: rgb(255, 215, 0);
+}

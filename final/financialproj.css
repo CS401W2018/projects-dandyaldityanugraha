@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255); /* White */
+    background-color: rgb(17, 17, 17); /* Very dark gray */
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: rgb(0, 0, 0); /* Black */
+    padding: 15px 20px;
+    border-bottom: 2px solid rgb(255, 215, 0); /* Gold */
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: rgb(255, 215, 0); /* Gold */
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: rgb(200, 200, 200); /* Light gray */
+    margin: 5px 0 0 0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: rgb(255, 215, 0); /* Gold */
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Black */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    color: rgb(255, 215, 0); /* Gold */
+    background-color: rgb(0, 0, 0); /* Black */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    color: rgb(255, 215, 0); /* Gold */
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    color: rgb(220, 220, 220); /* Light gray */
+    margin-bottom: 2rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: rgb(0, 0, 0); /* Black */
+    color: rgb(255, 255, 255); /* White */
+}
+
+table caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: rgb(255, 215, 0); /* Gold */
+}
+
+table th, table td {
+    padding: 0.8rem;
+    border: 1px solid rgb(255, 215, 0); /* Gold */
+}
+
+table th {
+    background-color: rgb(255, 215, 0); /* Gold */
+    color: rgb(0, 0, 0); /* Black */
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(30, 30, 30); /* Slightly lighter black */
+}
+
+table tr:hover {
+    background-color: rgb(40, 40, 40); /* Subtle hover effect */
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    color: rgb(255, 215, 0);
+}
