@@ -123,3 +123,32 @@ footer {
     padding: 20px;
     color: rgb(255, 215, 0);
 }
+
+/* Responsive Navigation: Media Query */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column; /* Stacks navigation links vertically */
+        align-items: center;
+        gap: 10px; /* Adds spacing between links */
+    }
+
+    .nav-bar ul li a {
+        font-size: 1.5em; /* Increases link size for better tap targets */
+        padding: 15px; /* Adds padding for larger clickable area */
+        width: 100%; /* Makes links span the full width */
+        text-align: center; /* Centers the text */
+        border-radius: 0; /* Removes rounded corners */
+    }
+
+    .nav-bar ul li a:hover,
+    .nav-bar ul li a.active {
+        border-radius: 5px; /* Restores rounded corners for hover/active */
+    }
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .dream {
+        width: 100%;
+    }
+}
