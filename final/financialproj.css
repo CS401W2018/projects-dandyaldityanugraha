@@ -1,37 +1,37 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255); /* White */
-    background-color: rgb(17, 17, 17); /* Very dark gray */
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17); 
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: rgb(0, 0, 0); /* Black */
+    background-color: rgb(0, 0, 0); 
     padding: 15px 20px;
-    border-bottom: 2px solid rgb(255, 215, 0); /* Gold */
+    border-bottom: 2px solid rgb(255, 215, 0); 
     text-align: center;
 }
 
 .header h1 {
     font-size: 2rem;
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0);
     margin: 0;
 }
 
 .header p {
     font-size: 1.2rem;
-    color: rgb(200, 200, 200); /* Light gray */
+    color: rgb(200, 200, 200); 
     margin: 5px 0 0 0;
 }
 
 /* Navigation Bar */
 .nav-bar {
-    background-color: rgb(255, 215, 0); /* Gold */
+    background-color: rgb(255, 215, 0); 
     padding: 10px 0;
+    
 }
 
 .nav-bar ul {
@@ -48,15 +48,15 @@ body {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0); /* Black */
+    color: rgb(0, 0, 0);
     font-size: 1.1em;
     font-weight: bold;
 }
 
 .nav-bar ul li a:hover,
 .nav-bar ul li a.active {
-    color: rgb(255, 215, 0); /* Gold */
-    background-color: rgb(0, 0, 0); /* Black */
+    color: rgb(255, 215, 0);
+    background-color: rgb(0, 0, 0); 
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -69,45 +69,66 @@ body {
 
 .main-content h2 {
     font-size: 2rem;
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0);
 }
 
 .main-content p {
     font-size: 1.1rem;
-    color: rgb(220, 220, 220); /* Light gray */
+    color: rgb(220, 220, 220);
     margin-bottom: 2rem;
 }
 
+/* div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  } */
+
+  .form{
+    max-width: 100%;
+    overflow-x: scroll;
+  }
 /* Table Styles */
 table {
-    width: 100%;
+    width: auto;
     max-width: 900px;
     margin: 0 auto 2rem;
     border-collapse: collapse;
     text-align: left;
-    background-color: rgb(0, 0, 0); /* Black */
-    color: rgb(255, 255, 255); /* White */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 table caption {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0); 
 }
 
 table th, table td {
     padding: 0.8rem;
-    border: 1px solid rgb(255, 215, 0); /* Gold */
+    border: 1px solid rgb(255, 215, 0);
 }
 
 table th {
-    background-color: rgb(255, 215, 0); /* Gold */
-    color: rgb(0, 0, 0); /* Black */
+    background-color: rgb(255, 215, 0); 
+    color: rgb(0, 0, 0); 
 }
 
 table tr:nth-child(even) {
-    background-color: rgb(30, 30, 30); /* Slightly lighter black */
+    background-color: rgb(30, 30, 30);
 }
 
 table tr:hover {
@@ -140,4 +161,5 @@ footer {
     .nav-bar ul li a.active {
         border-radius: 5px; /* Restores rounded corners for hover/active */
     }
+    
 }

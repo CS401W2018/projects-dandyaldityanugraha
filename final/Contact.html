@@ -30,32 +30,76 @@
     <div class="content">
         <aside class="sidebar">
             <h3>Our Contact Details</h3>
-            <ul>
+            <ul id="left">
                 <li><strong>Email:</strong> shoesietyspray@gmail.com</li>
                 <li><strong>Phone:</strong> +62-821-3742-7678</li>
                 <li><strong>Address:</strong> 45 Grogolan Street Ketelan Surakarta, Central Java, Indonesia</li>
             </ul>
             <h3>Follow Us</h3>
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/shoesiety_id?igsh=MWQ5ZWEya3Jpa3dweA==">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@shoesiety_id?_t=8ri5MKXR9oQ&_r=1">TikTok</a></li>
-                <li><a href="https://linktr.ee/shoesiety_id?utm_source=linktree_profile_share&ltsid=b762fdb4-44e6-41a7-9586-a7313ca8831f">Linktree</a></li>
+                <li><a href="https://www.instagram.com/shoesiety_id?igsh=MWQ5ZWEya3Jpa3dweA==" class="button">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@shoesiety_id?_t=8ri5MKXR9oQ&_r=1" class="button">TikTok</a></li>
+                <li><a href="https://linktr.ee/shoesiety_id?utm_source=linktree_profile_share&ltsid=b762fdb4-44e6-41a7-9586-a7313ca8831f" class="button">Linktree</a></li>
             </ul>
         </aside>
         
-        <main>
-            <form action="submit-form.php" method="POST" class="contact-form">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <main class="container">
+            <div>
+                <form action="response.json" method="POST" class="contact-form">
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <div>
+                        <label for="reseller-name">Full Name</label>
+                        <input type="text" id="reseller-name" name="reseller-name" placeholder="Enter your full name" required>
+                    </div>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    <div>
+                    <label for="reseller-email">Email Address</label>
+                    <input type="email" id="reseller-email" name="reseller-email" placeholder="Enter your email address" required>
+                    </div>
 
-                <button type="submit">Send Message</button>
-            </form>
+                    <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div>
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+                    </div>
+
+                    <div>
+                    <label for="platform">Preferred Selling Platform</label>
+                    <select id="platform" name="platform" required>
+                        <option value="">Select a platform</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    </div>
+
+                    <div class="option-box">
+                        <h3>Do you have prior reselling experience?</h3>
+                        <div class="yes-no">
+                            <div class="option">
+                                <input type="radio" id="experience-yes" name="experience" value="Yes" required>
+                                <label for="experience-yes">Yes</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="experience-no" name="experience" value="No" required>
+                                <label for="experience-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
         </main>
         <img src="../final/Photo/4.jpg" alt="Shoesiety" class="banner">
     </div>
@@ -64,5 +108,7 @@
         <p>&copy; 2024 Shoesiety. <br>
              All rights reserved.</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

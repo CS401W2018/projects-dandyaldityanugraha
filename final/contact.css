@@ -1,17 +1,15 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255); /* White */
-    background-color: rgb(17, 17, 17); /* Very dark gray */
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
     line-height: 1.6;
 }
 
-/* Header */
 header {
-    background-color: rgb(0, 0, 0); /* Black */
-    color: rgb(255, 215, 0); /* Gold */
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 215, 0); 
     text-align: center;
     padding: 2rem 0;
 }
@@ -21,9 +19,8 @@ header h1 {
     margin: 0;
 }
 
-/* Navigation Bar */
 .nav-bar {
-    background-color: rgb(255, 215, 0); /* Gold */
+    background-color: rgb(255, 215, 0);
     padding: 10px 0;
 }
 
@@ -41,15 +38,15 @@ header h1 {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0); /* Black */
+    color: rgb(0, 0, 0); 
     font-size: 1.1em;
     font-weight: bold;
 }
 
 .nav-bar ul li a:hover,
 .nav-bar ul li a.active {
-    color: rgb(255, 215, 0); /* Gold */
-    background-color: rgb(0, 0, 0); /* Black */
+    color: rgb(255, 215, 0); 
+    background-color: rgb(0, 0, 0); 
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -62,12 +59,20 @@ header h1 {
 
 .main-title h2 {
     font-size: 2rem;
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0); 
 }
 
 .main-title p {
     font-size: 1.1rem;
-    color: rgb(220, 220, 220); /* Light Gray */
+    color: rgb(220, 220, 220);
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 /* Content */
@@ -82,13 +87,14 @@ header h1 {
 .sidebar {
     flex: 1;
     max-width: 300px;
-    background-color: rgb(30, 30, 30); /* Dark Gray */
+    background-color: rgb(30, 30, 30); 
     padding: 1rem;
     border-radius: 10px;
+    text-align: center;
 }
 
 .sidebar h3 {
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0); 
     margin-bottom: 1rem;
 }
 
@@ -97,24 +103,40 @@ header h1 {
     padding: 0;
 }
 
+#left{
+    text-align: left;
+}
+
 .sidebar ul li {
     margin-bottom: 1rem;
-    color: rgb(220, 220, 220); /* Light Gray */
+    color: rgb(220, 220, 220);
 }
 
 .social-links li a {
-    text-decoration: none;
-    color: rgb(255, 215, 0); /* Gold */
+    color: black; 
 }
 
-.social-links li a:hover {
-    text-decoration: underline;
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 215, 0); 
+    border: 2px solid rgb(255, 215, 0); 
 }
 
 /* Contact Form */
 .contact-form {
     flex: 2;
-    background-color: rgb(30, 30, 30); /* Dark Gray */
+    background-color: rgb(30, 30, 30); 
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -123,24 +145,39 @@ header h1 {
 .contact-form label {
     display: block;
     font-size: 1rem;
-    color: rgb(255, 215, 0); /* Gold */
+    color: rgb(255, 215, 0); 
     margin-bottom: 0.5rem;
+}
+
+.option-box{
+    color: rgb(255, 215, 0);
+}
+
+.yes-no{
+    display: flex;
+    column-gap: 50px;
+}
+
+.option{
+    display: flex;
+    column-gap: 5px;
+    cursor: pointer;
 }
 
 .contact-form input, .contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1.5rem;
-    border: 1px solid rgb(255, 215, 0); /* Gold */
+    border: 1px solid rgb(255, 215, 0); 
     border-radius: 5px;
-    background-color: rgb(20, 20, 20); /* Very dark gray */
-    color: rgb(255, 255, 255); /* White */
+    background-color: rgb(20, 20, 20); 
+    color: rgb(255, 255, 255); 
     font-size: 1rem;
 }
 
 .contact-form button {
-    background-color: rgb(255, 215, 0); /* Gold */
-    color: rgb(0, 0, 0); /* Black */
+    background-color: rgb(255, 215, 0); 
+    color: rgb(0, 0, 0); 
     border: none;
     padding: 1rem;
     width: 100%;
@@ -150,18 +187,50 @@ header h1 {
 }
 
 .contact-form button:hover {
-    background-color: rgb(0, 0, 0); /* Black */
-    color: rgb(255, 215, 0); /* Gold */
-    border: 2px solid rgb(255, 215, 0); /* Gold */
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 215, 0); 
+    border: 2px solid rgb(255, 215, 0); 
 }
 .banner {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 5px solid rgb(255, 215, 0); /* Gold */
+    border: 5px solid rgb(255, 215, 0);
     border-radius: 10px;
 }
+
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+/* Contact Form Inside the Container */
+.form-container .contact-form {
+    width: 100%;
+}
+
+/* Center Alignment for Radio Buttons */
+.form-container .contact-form input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-container .contact-form label[for="experience-yes"],
+.form-container .contact-form label[for="experience-no"] {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
 
 /* Footer */
 footer {
