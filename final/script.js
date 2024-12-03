@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
+    console.log('Form Element:', form); // Debugging log
 
     if (form) {
         form.addEventListener('submit', function (event) {
+            console.log('Form submission triggered'); // Debugging log
             event.preventDefault(); // Prevent default form submission
 
             // Collect form data
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Form Data:', formData); // Debugging: Log form data to console
 
             // Send the data via Fetch API
-            fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html/post', { // Replace with your backend endpoint URL
+            fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', { // Replace with your backend endpoint URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Response:', data); // Debugging: Log server response to console
                     alert('Thank you! Your application has been submitted.');
                     // Reset the form after successful submission
-                    document.getElementById('contactForm').reset();
+                    form.reset();
                 })
                 .catch((error) => {
                     console.error('Submission Error:', error); // Debugging: Log errors to console
