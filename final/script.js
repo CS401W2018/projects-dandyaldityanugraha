@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
-    console.log('Form Element:', form); // Debugging log
 
     if (form) {
         form.addEventListener('submit', function (event) {
-            console.log('Form submission triggered'); // Debugging log
             event.preventDefault(); // Prevent default form submission
 
             // Collect form data
@@ -16,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const experience = document.querySelector('input[name="experience"]:checked')?.value || "";
             const message = document.getElementById('message').value.trim();
 
-            // Input validation
+            // Validate input
             if (!fullName || !email || !phone || !address || !platform || !experience || message.length < 10) {
-                alert('Please complete all required fields and ensure the message is at least 10 characters.');
+                alert('Please complete all required fields and ensure the message is at least 10 characters long.');
                 return;
             }
 
@@ -33,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 message,
             };
 
-            console.log('Form Data:', formData); // Debugging: Log form data to console
+            console.log('Form Data:', formData); // Log form data for debugging
 
-            // Send the data via Fetch API
-            fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', { // Replace with your backend endpoint URL
+            // Send data via Fetch API
+            fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', { // Replace this URL with your backend endpoint
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,19 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
             })
                 .then((response) => {
                     if (!response.ok) {
-                        throw new Error('Failed to submit the form.');
+                        throw new Error(`Failed to submit the form. HTTP Status: ${response.status}`);
                     }
                     return response.json();
                 })
                 .then((data) => {
-                    console.log('Response:', data); // Debugging: Log server response to console
+                    console.log('Server Response:', data); // Log server response for debugging
                     alert('Thank you! Your application has been submitted.');
-                    // Reset the form after successful submission
-                    form.reset();
+                    form.reset(); // Reset the form after successful submission
                 })
                 .catch((error) => {
-                    console.error('Submission Error:', error); // Debugging: Log errors to console
-                    alert('There was an error submitting your application. Please try again later.');
+                    console.error('Submission Error:', error); // Log errors for debugging
+                    alert('There was an error submitting your application. Please try again.');
                 });
         });
     } else {
