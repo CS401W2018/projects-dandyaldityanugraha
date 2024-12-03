@@ -27,8 +27,10 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         message,
     };
 
+    console.log('Form Data:', formData); // Debugging: Log form data to console
+
     // Send the data via Fetch API
-    fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', {
+    fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html/post', { // Replace with your backend endpoint URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -37,19 +39,18 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     })
         .then((response) => {
             if (!response.ok) {
-                throw new Error('Error submitting form');
+                throw new Error('Failed to submit the form.');
             }
             return response.json();
         })
         .then((data) => {
+            console.log('Response:', data); // Debugging: Log server response to console
             alert('Thank you! Your application has been submitted.');
-            console.log('Server Response:', data);
-
-            // Reset the form
+            // Reset the form after successful submission
             document.getElementById('contactForm').reset();
         })
         .catch((error) => {
-            console.error('Submission Error:', error);
+            console.error('Submission Error:', error); // Debugging: Log errors to console
             alert('There was an error submitting your application. Please try again later.');
         });
 });
