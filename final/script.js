@@ -44,7 +44,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 
     // Use GET for GitHub Pages or Mock Testing
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://cs401w2018.github.io/projects-dandyaldityanugraha/js/response.json", true); //JSON file path
+    xhr.open("GET", "https://cs401w2018.github.io/projects-dandyaldityanugraha/final/response.json", true); //JSON file path
     xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
     xhr.onreadystatechange = function () {
