@@ -28,7 +28,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     };
 
     // Send the data via Fetch API
-    fetch('https://example.com/submit-form', {
+    fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
