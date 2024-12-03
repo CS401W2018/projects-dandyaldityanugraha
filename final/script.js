@@ -1,4 +1,4 @@
-document.querySelector('.contact-form').addEventListener('submit', function (event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
     // Collect form data
@@ -11,33 +11,8 @@ document.querySelector('.contact-form').addEventListener('submit', function (eve
     const message = document.getElementById('message').value.trim();
 
     // Input validation
-    if (!fullName) {
-        alert('Full Name cannot be blank.');
-        return;
-    }
-
-    if (!email) {
-        alert('Email Address cannot be blank.');
-        return;
-    }
-
-    if (!phone) {
-        alert('Phone Number cannot be blank.');
-        return;
-    }
-
-    if (!platform) {
-        alert('Please select a Preferred Selling Platform.');
-        return;
-    }
-
-    if (!experience) {
-        alert('Please select your reselling experience.');
-        return;
-    }
-
-    if (message.length < 10) {
-        alert('Message must be at least 10 characters long.');
+    if (!fullName || !email || !phone || !address || !platform || !experience || message.length < 10) {
+        alert('Please complete all required fields and ensure the message is at least 10 characters.');
         return;
     }
 
@@ -53,7 +28,7 @@ document.querySelector('.contact-form').addEventListener('submit', function (eve
     };
 
     // Send the data via Fetch API
-    fetch('submit-form.php', {
+    fetch('https://example.com/submit-form', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +46,7 @@ document.querySelector('.contact-form').addEventListener('submit', function (eve
             console.log('Server Response:', data);
 
             // Reset the form
-            document.querySelector('.contact-form').reset();
+            document.getElementById('contactForm').reset();
         })
         .catch((error) => {
             console.error('Submission Error:', error);
