@@ -51,6 +51,20 @@ header h1 {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+.video {
+    text-align: center;
+}
+
+.video h1 {
+    color: rgb(255, 215, 0);
+}
+
+.video-box a:hover {
+    text-decoration: none;
+    border: solid thick rgb(255, 215, 0);
+}
+
 /* Section Title */
 .main-title {
     text-align: center;
@@ -77,7 +91,6 @@ header h1 {
 }
 
 .about-company {
-    max-width: 800px;
     text-align: center;
     margin-bottom: 2rem;
 }
