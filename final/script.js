@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Form Data:', formData); // Log form data for debugging
 
             // Send data via Fetch API
-            fetch('https://cs401w2018.github.io/projects-dandyaldityanugraha/final/Home.html', { // Replace this URL with your backend endpoint
+            fetch('https://httpbin.org/post', { // Replace with your actual backend URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,14 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     return response.json();
                 })
                 .then((data) => {
-                    console.log('Server Response:', data); // Log server response for debugging
+                    console.log('Response:', data);
                     alert('Thank you! Your application has been submitted.');
-                    form.reset(); // Reset the form after successful submission
+                    document.getElementById('contactForm').reset(); // Reset the form
                 })
                 .catch((error) => {
-                    console.error('Submission Error:', error); // Log errors for debugging
+                    console.error('Submission Error:', error);
                     alert('There was an error submitting your application. Please try again.');
                 });
+            
         });
     } else {
         console.error('Form element not found in the DOM.');
