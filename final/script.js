@@ -1,64 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
+// Form Submission Handler
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission behavior
 
-    if (form) {
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+    // Collect form data
+    const fullName = document.getElementById("reseller-name").value.trim();
+    const email = document.getElementById("reseller-email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const platform = document.getElementById("platform").value;
+    const experience = document.querySelector('input[name="experience"]:checked')?.value || "";
+    const message = document.getElementById("message").value.trim();
 
-            // Collect form data
-            const fullName = document.getElementById('reseller-name').value.trim();
-            const email = document.getElementById('reseller-email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const address = document.getElementById('address').value.trim();
-            const platform = document.getElementById('platform').value;
-            const experience = document.querySelector('input[name="experience"]:checked')?.value || "";
-            const message = document.getElementById('message').value.trim();
-
-            // Validate input
-            if (!fullName || !email || !phone || !address || !platform || !experience || message.length < 10) {
-                alert('Please complete all required fields and ensure the message is at least 10 characters long.');
-                return;
-            }
-
-            // Create a formData object
-            const formData = {
-                fullName,
-                email,
-                phone,
-                address,
-                platform,
-                experience,
-                message,
-            };
-
-            console.log('Form Data:', formData); // Log form data for debugging
-
-            // Send data via Fetch API
-            fetch('https://httpbin.org/post', { // Replace with your actual backend URL
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            })
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to submit the form. HTTP Status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then((data) => {
-                    console.log('Response:', data);
-                    alert('Thank you! Your application has been submitted.');
-                    document.getElementById('contactForm').reset(); // Reset the form
-                })
-                .catch((error) => {
-                    console.error('Submission Error:', error);
-                    alert('There was an error submitting your application. Please try again.');
-                });
-            
-        });
-    } else {
-        console.error('Form element not found in the DOM.');
+    // 1: Validate Required Fields
+    if (!fullName || !email || !phone || !address || !platform || !experience || !message) {
+        alert("All fields are required!");
+        return;
     }
+
+    // 2: Validate Phone Number
+    if (!/^\d{10,15}$/.test(phone)) {
+        alert("Please enter a valid phone number (10-15 digits).");
+        return;
+    }
+
+    // 3: Validate Message Length
+    if (message.length < 10) {
+        alert("Message must be at least 10 characters long.");
+        return;
+    }
+
+    // Prepare data for submission
+    const data = {
+        fullName: fullName,
+        email: email,
+        phone: phone,
+        address: address,
+        platform: platform,
+        experience: experience,
+        message: message,
+    };
+
+    console.log("Form Data:", data); // Debugging log
+
+    // Use GET for GitHub Pages or Mock Testing
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "../js/response.json", true); // Replace with the actual JSON file path
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            document.getElementById("contactForm").style.display = "none"; // Hide form on success
+            document.querySelector("main").innerHTML += `<p>${response.message}</p>`; // Display response message
+        } else if (xhr.readyState === 4) {
+            alert("There was an error submitting your application. Please try again later.");
+        }
+    };
+
+    xhr.send(JSON.stringify(data)); // Send data as JSON
 });
