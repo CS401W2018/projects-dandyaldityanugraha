@@ -121,6 +121,13 @@ body {
     border: 2pxv solid rgb(255, 215, 0); 
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
 #ref {
     color: rgb(255, 215, 0);
 }

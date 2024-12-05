@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255); 
+    color: rgb(200, 200, 200); 
     background-color: rgb(17, 17, 17);
     line-height: 1.6;
 }
@@ -78,6 +78,7 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
 .title {
     font-size: 2.5em;
     margin: 0;
@@ -85,6 +86,7 @@ body {
 
 .main-content {
     padding: 20px;
+    text-align: center;
 }
 
 .highlight {
@@ -110,6 +112,126 @@ body {
     text-align: center;
 }
 
+.grid-item h3 {
+    color: rgb(255, 215, 0);
+}
+
+#color {
+    color: rgb(255, 215, 0);
+}
+
+.image-gallery {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.image-gallery h2 {
+    color: rgb(255, 215, 0);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    background-color: rgb(31, 31, 31);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 247px;
+    border-radius: 8px;
+}
+
+.details-section {
+    background-color: rgb(31, 31, 31);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.details-section h2 {
+    color: rgb(255, 215, 0);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.details-section ul {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 20px;
+    color: rgb(200, 200, 200);
+    text-align: center;
+}
+
+#card-container{
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.card {
+    max-width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
+    margin: 20px;
+}
+
+.card h3 {
+    color: rgb(255, 215, 0);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card h5 {
+    color: rgb(255, 215, 0);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#ref {
+    color: rgb(255, 215, 0);
+}
 
 footer {
     text-align: center;
