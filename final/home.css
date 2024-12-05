@@ -11,6 +11,7 @@ body {
     background-color: rgb(0, 0, 0);
     padding: 15px 20px;
     border-bottom: 2px solid rgb(255, 215, 0);
+    text-align: left;
 }
 
 .header-container {
